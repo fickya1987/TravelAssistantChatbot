@@ -13,12 +13,12 @@ load_dotenv()
 api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 # Define the repository ID and task
-repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+repo_id = "google/gemma-3-12b-it"
 task = "text-generation"
 
 # App config
-st.set_page_config(page_title="Yatra Sevak.AI",page_icon= "🌍")
-st.title("Yatra Sevak.AI ✈️")
+st.set_page_config(page_title="LESTARI.AI",page_icon= "🌍")
+st.title("LESTARI.AI ✈️")
 
 # Define the template outside the function
 template = """
