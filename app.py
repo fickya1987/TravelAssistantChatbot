@@ -14,7 +14,6 @@ api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 # Define the repository ID and task
 repo_id = "google/gemma-3-12b-it"
-task = "text-generation"
 
 # App config
 st.set_page_config(page_title="LESTARI.AI",page_icon= "🌍")
