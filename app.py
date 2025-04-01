@@ -13,7 +13,9 @@ load_dotenv()
 api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 # Define the repository ID and task
-repo_id = "google/gemma-3-12b-it"
+repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+task = "text-generation"
+
 
 # App config
 st.set_page_config(page_title="LESTARI.AI",page_icon= "🌍")
@@ -55,7 +57,8 @@ def get_response(user_query, chat_history):
     # Initialize the Hugging Face Endpoint
     llm = HuggingFaceEndpoint(
         huggingfacehub_api_token=api_token,
-        repo_id=repo_id
+        repo_id=repo_id,
+        task=task
     )
 
     chain = prompt | llm | StrOutputParser()
