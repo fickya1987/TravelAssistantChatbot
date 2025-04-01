@@ -55,8 +55,7 @@ def get_response(user_query, chat_history):
     # Initialize the Hugging Face Endpoint
     llm = HuggingFaceEndpoint(
         huggingfacehub_api_token=api_token,
-        repo_id=repo_id,
-        task=task
+        repo_id=repo_id
     )
 
     chain = prompt | llm | StrOutputParser()
